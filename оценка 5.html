@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма Обратной Связи</title>
+    <link rel="stylesheet" href="оценка 5.css">
+</head>
+<body>
+    <div class="contact-form">
+        <h2>ОБРАТНАЯ СВЯЗЬ</h2>
+        <p>Здесь Вы можете отправить нам сообщение</p>
+        <form id="feedbackForm" action="/submit" method="POST">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Введите ваш e-mail" required>
+
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" placeholder="Введите ваше сообщение" required></textarea>
+
+            <label for="file-upload" class="custom-file-upload">
+                <input type="file" id="file-upload">
+                + Прикрепить файл
+            </label>
+
+            <div class="captcha">
+                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+            </div>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="form.js"></script>
+</body>
+</html>
